@@ -57,25 +57,9 @@ bool	stack_sorted(t_stack_node *a)
 	return (true);
 }
 
-void	ft_error(t_stack_node **a, char **av, int ac)
+void	ft_error(t_stack_node **a)
 {
-	int	i;
-	int	check;
-
-	check = 0;
-	i = 0;
 	free_stack(a);
-	if (ac == 2)
-	{
-		if (!av || !*av)
-			check = 1;
-		while (av[i] && !check)
-		{
-			free(av[i]);
-			i++;
-		}
-		free(av);
-	}
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }

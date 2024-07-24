@@ -26,9 +26,9 @@ int	main(int ac, char **av)
 	}
 	if (ac == 2)
 		av = ft_split(av[1], ' ');
-	init_stack(&a, av + 1, ac);
+	init_stack(&a, av + 1);
 	if (check_if_dup(a))
-		ft_error(&a, av, ac);
+		ft_error(&a);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
