@@ -21,7 +21,6 @@ int	main(int ac, char **av)
 	a = NULL;
 	if (ac < 2 || !av[1] || !*av[1])
 	{
-		write(2, "Error\n", 6);
 		return (1);
 	}
 	if (ac == 2)
