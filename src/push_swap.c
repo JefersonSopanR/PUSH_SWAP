@@ -35,6 +35,8 @@ int	main(int ac, char **av)
 		else
 			sort_stack(&a, &b);
 	}
+	if (ac == 2)
+		ft_free_av(av);
 	free_stack(&a);
 	return (0);
 }

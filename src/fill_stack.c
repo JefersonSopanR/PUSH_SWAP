@@ -52,3 +52,16 @@ void	init_stack(t_stack_node **a, char **av)
 		i++;
 	}
 }
+
+void	ft_free_av(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+	{
+		free(av[i]);
+		i++;
+	}
+	free(av);
+}

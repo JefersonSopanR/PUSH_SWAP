@@ -74,5 +74,6 @@ void			set_stack_b(t_stack_node *a, t_stack_node *b);
 void			sa(t_stack_node **a, int print);
 void			sb(t_stack_node **b, int print);
 void			ss(t_stack_node **a, t_stack_node **b, int print);
+void			ft_free_av(char **av);
 
 #endif
