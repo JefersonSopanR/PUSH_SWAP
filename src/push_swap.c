@@ -20,14 +20,12 @@ int	main(int ac, char **av)
 	b = NULL;
 	a = NULL;
 	if (ac < 2 || !av[1] || !*av[1])
-	{
 		return (1);
-	}
 	if (ac == 2)
 		av = ft_split(av[1], ' ');
-	init_stack(&a, av + 1);
+	init_stack(&a, av + 1, ac);
 	if (check_if_dup(a))
-		ft_error(&a);
+		ft_error_dup(&a, av, ac);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)

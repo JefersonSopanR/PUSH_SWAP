@@ -74,9 +74,9 @@ int	main(int ac, char **av)
 	}
 	if (ac == 2)
 		av = ft_split(av[1], ' ');
-	init_stack(&a, av + 1);
+	init_stack(&a, av + 1, ac);
 	if (check_if_dup(a))
-		ft_error(&a);
+		ft_error_dup(&a, av, ac);
 	process_operations(&a, &b);
 	if (stack_sorted(a))
 		write(1, "OK\n", 3);

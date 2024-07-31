@@ -35,7 +35,7 @@ void	append_node(t_stack_node **a, int n)
 	}
 }
 
-void	init_stack(t_stack_node **a, char **av)
+void	init_stack(t_stack_node **a, char **av, int ac)
 {
 	int				i;
 	long			num;
@@ -44,10 +44,18 @@ void	init_stack(t_stack_node **a, char **av)
 	while (av[i])
 	{
 		if (error_check(av[i]))
+		{
+			if (ac == 2)
+				ft_free_av(av - 1);
 			ft_error(a);
+		}
 		num = ft_atoi(av[i]);
 		if (num > INT_MAX || num < INT_MIN)
+		{
+			if (ac == 2)
+				ft_free_av(av - 1);
 			ft_error(a);
+		}
 		append_node(a, (int)num);
 		i++;
 	}
