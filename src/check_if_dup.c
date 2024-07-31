@@ -64,15 +64,6 @@ void	ft_error(t_stack_node **a)
 	exit(EXIT_FAILURE);
 }
 
-void	ft_error_dup(t_stack_node **a, char **av, int ac)
-{
-	free_stack(a);
-	write(2, "Error\n", 6);
-	if (ac == 2)
-		ft_free_av(av);
-	exit(EXIT_FAILURE);
-}
-
 bool	error_check(char *str)
 {
 	int	i;

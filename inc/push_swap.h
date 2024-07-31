@@ -32,7 +32,6 @@ typedef struct s_stack
 	struct s_stack	*target;
 }					t_stack_node;
 
-
 void			ft_error_dup(t_stack_node **a, char **av, int ac);
 void			init_stack(t_stack_node **a, char **av, int ac);
 int				check_if_dup(t_stack_node *a);

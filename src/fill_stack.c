@@ -61,6 +61,15 @@ void	init_stack(t_stack_node **a, char **av, int ac)
 	}
 }
 
+void	ft_error_dup(t_stack_node **a, char **av, int ac)
+{
+	free_stack(a);
+	write(2, "Error\n", 6);
+	if (ac == 2)
+		ft_free_av(av);
+	exit(EXIT_FAILURE);
+}
+
 void	ft_free_av(char **av)
 {
 	int	i;
